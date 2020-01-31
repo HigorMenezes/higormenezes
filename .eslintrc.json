@@ -24,6 +24,7 @@
   },
   "plugins": ["react", "jsx-a11y", "import", "react-hooks", "prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "import/prefer-default-export": false
   }
 }

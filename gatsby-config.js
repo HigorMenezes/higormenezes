@@ -9,8 +9,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#621055`,
         theme_color: `#621055`,
         display: `minimal-ui`,
-        icon: `src/images/h-icon.png`,
+        icon: `src/assets/h-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
