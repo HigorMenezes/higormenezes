@@ -1,0 +1,9 @@
+body {
+  background-color: var(--bg);
+}
+
+*,
+*::after,
+*::before {
+  transition: background-color linear 0.2s;
+}
