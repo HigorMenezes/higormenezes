@@ -15,4 +15,8 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-shadow: var(--shadow);
+
+  margin-bottom: 2rem;
 `

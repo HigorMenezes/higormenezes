@@ -1,5 +1,6 @@
 body {
-  --headerHeight: 7.2rem;
+  --headerHeight: 7rem;
+  --shadow: 0px 1px 5px 1px hsla(0, 0%, 0%, 0.2);
 }
 
 body.light {
