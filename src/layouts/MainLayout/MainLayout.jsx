@@ -8,6 +8,8 @@ import "../../styles/reset.css"
 import "../../styles/typography.css"
 import "../../styles/global.css"
 
+import { Container, HeaderContainer } from "./styles"
+
 const MainLayout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -20,14 +22,10 @@ const MainLayout = ({ children }) => {
   `)
 
   return (
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `0 1.0875rem 1.45rem`,
-      }}
-    >
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <Container>
+      <HeaderContainer>
+        <Header siteTitle={data.site.siteMetadata.title} />
+      </HeaderContainer>
 
       <main>{children}</main>
       <footer>
@@ -35,7 +33,7 @@ const MainLayout = ({ children }) => {
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
-    </div>
+    </Container>
   )
 }
 

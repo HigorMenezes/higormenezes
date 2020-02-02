@@ -1,9 +1,12 @@
 import styled from "styled-components"
-import CustomLink from "../../components/CustomLink"
+import media from "styled-media-query"
+import { RightArrowAlt } from "styled-icons/boxicons-regular/RightArrowAlt"
 
-export const Container = styled.header`
+export const HeaderContainer = styled.header`
   width: 100%;
-  height: 7.6rem;
+  height: 100%;
+  max-width: 50rem;
+  padding: 0.5rem 1rem;
 
   display: flex;
   flex-direction: column;
@@ -11,7 +14,7 @@ export const Container = styled.header`
   justify-content: space-between;
 `
 
-export const HeaderContainer = styled.div`
+export const HeaderContent = styled.div`
   width: 100%;
   height: 70%;
 
@@ -20,49 +23,30 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
 `
 
-export const TitleContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-`
-
 export const Title = styled.h1`
   width: 100%;
-  height: 100%;
   margin: 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 `
 
-export const NavigationContainer = styled.nav`
+export const NavigationContent = styled.nav`
   width: 100%;
   height: 30%;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
-  ul {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
+  padding-left: 1rem;
 
-    li {
-      list-style-type: none;
-      padding: 0.2rem 0.5rem;
-      margin: 0;
-
-      &:not(:last-child) {
-        margin-right: 1rem;
-      }
-    }
-  }
+  ${media.greaterThan("small")`
+    padding-left: 5rem;
+  `}
 `
 
-export const NavigationLink = styled(CustomLink)`
-  text-transform: uppercase;
-  font-weight: 500;
+export const RightArrow = styled(RightArrowAlt)`
+  width: 1.5rem;
+  color: var(--textLink);
 `

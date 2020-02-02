@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 import Img from "gatsby-image"
 
 export const AvatarContainer = styled.div`
@@ -9,6 +10,12 @@ export const AvatarContainer = styled.div`
   overflow: hidden;
   border-radius: 50%;
   margin: 0.5rem;
+
+  display: none;
+
+  ${media.greaterThan("small")`
+    display: block;
+  `}
 `
 
 export const Image = styled(Img)`

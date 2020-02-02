@@ -1,40 +1,28 @@
 import React from "react"
-import { Link } from "gatsby"
-import Avatar from "./components/Avatar"
-import DarkLightToogle from "../../components/DarkLightToogle"
+import Avatar from "../../components/Avatar"
+import DarkLightToggle from "../../components/DarkLightToggle"
+import NavigationBar from "../../components/NavigationBar"
 
 import {
-  Container,
   HeaderContainer,
-  TitleContainer,
+  HeaderContent,
   Title,
-  NavigationContainer,
-  NavigationLink,
+  NavigationContent,
+  RightArrow,
 } from "./styles"
 
 const Header = ({ siteTitle }) => (
-  <Container>
-    <HeaderContainer>
-      <Link to="/page-2/">
-        <TitleContainer>
-          <Avatar />
-          <Title>{siteTitle}</Title>
-        </TitleContainer>
-      </Link>
-      <DarkLightToogle />
-    </HeaderContainer>
-
-    <NavigationContainer>
-      <ul>
-        <li>
-          <NavigationLink to="/page-2/">Go to page 2</NavigationLink>
-        </li>
-        <li>
-          <NavigationLink to="/page-2/">Go to page 2</NavigationLink>
-        </li>
-      </ul>
-    </NavigationContainer>
-  </Container>
+  <HeaderContainer>
+    <HeaderContent>
+      <Avatar />
+      <Title>{siteTitle}</Title>
+      <DarkLightToggle />
+    </HeaderContent>
+    <NavigationContent>
+      <RightArrow />
+      <NavigationBar />
+    </NavigationContent>
+  </HeaderContainer>
 )
 
 export default Header

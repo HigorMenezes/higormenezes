@@ -1,3 +1,7 @@
+body {
+  --headerHeight: 7.2rem;
+}
+
 body.light {
   --bg: #fffbfe;
   --textNormal: rgba(30, 30, 30, 0.65);
