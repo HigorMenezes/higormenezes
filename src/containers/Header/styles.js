@@ -4,6 +4,24 @@ import { RightArrowAlt } from "styled-icons/boxicons-regular/RightArrowAlt"
 
 export const HeaderContainer = styled.header`
   width: 100%;
+  height: var(--headerHeight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: var(--indexTop);
+  background-color: var(--bgTransparent);
+
+  box-shadow: var(--shadow);
+
+  margin-bottom: 2rem;
+`
+
+export const HeaderContent = styled.header`
+  width: 100%;
   height: 100%;
   max-width: 50rem;
   padding: 0.5rem 1rem;
@@ -14,7 +32,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
 `
 
-export const HeaderContent = styled.div`
+export const HeaderTitle = styled.div`
   width: 100%;
   height: 70%;
 
@@ -31,7 +49,7 @@ export const Title = styled.h1`
   overflow: hidden;
 `
 
-export const NavigationContent = styled.nav`
+export const HeaderNavigation = styled.nav`
   width: 100%;
   height: 30%;
 

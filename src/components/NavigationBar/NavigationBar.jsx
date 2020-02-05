@@ -5,8 +5,8 @@ import { NavigationList, NavigationItem, NavigationLink } from "./styles"
 
 const NavigationBar = () => (
   <NavigationList>
-    {routes.map(({to, name}) => (
-      <NavigationItem>
+    {routes.map(({ to, name }) => (
+      <NavigationItem key={to}>
         <NavigationLink to={to}>{name}</NavigationLink>
       </NavigationItem>
     ))}

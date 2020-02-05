@@ -1,10 +1,13 @@
 body {
   --headerHeight: 8rem;
+  --footerHeight: 3rem;
   --shadow: 0px 1px 5px 1px hsla(0, 0%, 0%, 0.2);
+  --indexTop: 900;
 }
 
 body.light {
   --bg: #fffbfe;
+  --bgTransparent: rgba(255, 251, 254, 0.9);
   --textNormal: rgba(30, 30, 30, 0.65);
   --textTitle: rgba(30, 30, 30, 0.85);
   --textLink: #4ea2b7;
@@ -14,6 +17,7 @@ body.light {
 
 body.dark {
   --bg: #303030;
+  --bgTransparent: rgba(48, 48, 48, 0.95);
   --textNormal: rgba(220, 220, 220, 0.8);
   --textTitle: rgba(220, 220, 220, 0.95);
   --textLink: #67d1eb;

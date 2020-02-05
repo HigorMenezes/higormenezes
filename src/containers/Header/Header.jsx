@@ -6,22 +6,25 @@ import NavigationBar from "../../components/NavigationBar"
 import {
   HeaderContainer,
   HeaderContent,
+  HeaderTitle,
+  HeaderNavigation,
   Title,
-  NavigationContent,
   RightArrow,
 } from "./styles"
 
 const Header = ({ siteTitle }) => (
   <HeaderContainer>
     <HeaderContent>
-      <Avatar />
-      <Title>{siteTitle}</Title>
-      <DarkLightToggle />
+      <HeaderTitle>
+        <Avatar />
+        <Title>{siteTitle}</Title>
+        <DarkLightToggle />
+      </HeaderTitle>
+      <HeaderNavigation>
+        <RightArrow />
+        <NavigationBar />
+      </HeaderNavigation>
     </HeaderContent>
-    <NavigationContent>
-      <RightArrow />
-      <NavigationBar />
-    </NavigationContent>
   </HeaderContainer>
 )
 

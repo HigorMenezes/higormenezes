@@ -8,15 +8,3 @@ export const Container = styled.div`
   align-items: center;
   justify-content: flex-start;
 `
-
-export const HeaderContainer = styled.header`
-  width: 100%;
-  height: var(--headerHeight);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: var(--shadow);
-
-  margin-bottom: 2rem;
-`
