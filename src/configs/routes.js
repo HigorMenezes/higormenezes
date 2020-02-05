@@ -1,15 +1,15 @@
 const routes = [
   {
     name: "Home",
-    to: "/page-2/",
+    to: "/",
   },
   {
     name: "Me",
-    to: "/page-2/",
+    to: "/me/",
   },
   {
     name: "Posts",
-    to: "/page-2/",
+    to: "/posts/",
   },
 ]
 

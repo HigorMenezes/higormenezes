@@ -5,9 +5,9 @@ import { NavigationList, NavigationItem, NavigationLink } from "./styles"
 
 const NavigationBar = () => (
   <NavigationList>
-    {routes.map(route => (
+    {routes.map(({to, name}) => (
       <NavigationItem>
-        <NavigationLink to={route.to}>{route.name}</NavigationLink>
+        <NavigationLink to={to}>{name}</NavigationLink>
       </NavigationItem>
     ))}
   </NavigationList>
