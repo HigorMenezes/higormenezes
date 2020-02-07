@@ -12,20 +12,28 @@ import {
   RightArrow,
 } from "./styles"
 
-const Header = ({ siteTitle }) => (
-  <HeaderContainer>
-    <HeaderContent>
-      <HeaderTitle>
-        <Avatar />
-        <Title>{siteTitle}</Title>
-        <DarkLightToggle />
-      </HeaderTitle>
-      <HeaderNavigation>
-        <RightArrow />
-        <NavigationBar />
-      </HeaderNavigation>
-    </HeaderContent>
-  </HeaderContainer>
-)
+import useScroll from "../../hooks/useScroll"
+import checkShouldShowHeader from "../../helpers/checkShouldShowHeader"
+
+const Header = ({ siteTitle }) => {
+  const { delta, distanceFromTop } = useScroll()
+  const shouldShowHeader = checkShouldShowHeader({ delta, distanceFromTop })
+
+  return (
+    <HeaderContainer className={shouldShowHeader ? "show" : "hide"}>
+      <HeaderContent>
+        <HeaderTitle>
+          <Avatar />
+          <Title>{siteTitle}</Title>
+          <DarkLightToggle />
+        </HeaderTitle>
+        <HeaderNavigation>
+          <RightArrow />
+          <NavigationBar />
+        </HeaderNavigation>
+      </HeaderContent>
+    </HeaderContainer>
+  )
+}
 
 export default Header

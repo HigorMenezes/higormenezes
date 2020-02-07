@@ -13,4 +13,4 @@ const NavigationBar = () => (
   </NavigationList>
 )
 
-export default NavigationBar
+export default React.memo(NavigationBar)

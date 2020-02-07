@@ -14,4 +14,4 @@ const DarkLightToggle = () => (
   </ThemeToggler>
 )
 
-export default DarkLightToggle
+export default React.memo(DarkLightToggle)

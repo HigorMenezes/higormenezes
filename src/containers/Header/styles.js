@@ -1,10 +1,11 @@
+import React from "react"
 import styled from "styled-components"
 import media from "styled-media-query"
 import { RightArrowAlt } from "styled-icons/boxicons-regular/RightArrowAlt"
 
 export const HeaderContainer = styled.header`
   width: 100%;
-  height: var(--headerHeight);
+  height: calc(var(--headerHeight) + var(--navbarHeight));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,13 +19,19 @@ export const HeaderContainer = styled.header`
   box-shadow: var(--shadow);
 
   margin-bottom: 2rem;
+
+  transition: margin 0.5s;
+
+  &.hide {
+    margin-top: calc(-1 * var(--headerHeight));
+  }
 `
 
-export const HeaderContent = styled.header`
+export const HeaderContent = styled.div`
   width: 100%;
   height: 100%;
   max-width: 50rem;
-  padding: 0.5rem 1rem;
+  padding: 0rem 1rem;
 
   display: flex;
   flex-direction: column;
@@ -34,7 +41,7 @@ export const HeaderContent = styled.header`
 
 export const HeaderTitle = styled.div`
   width: 100%;
-  height: 70%;
+  height: var(--headerHeight);
 
   display: flex;
   align-items: center;
@@ -51,7 +58,7 @@ export const Title = styled.h1`
 
 export const HeaderNavigation = styled.nav`
   width: 100%;
-  height: 30%;
+  height: var(--navbarHeight);
 
   display: flex;
   align-items: center;

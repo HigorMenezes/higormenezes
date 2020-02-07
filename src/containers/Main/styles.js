@@ -5,7 +5,7 @@ export const MainContainer = styled.main`
   height: 100%;
   max-width: 40rem;
   padding: 1.5rem 1rem 0.5rem 1rem;
-  margin-top: var(--headerHeight);
+  margin-top: calc(var(--headerHeight) + var(--navbarHeight));
   margin-bottom: var(--footerHeight);
 
   display: flex;

@@ -1,5 +1,6 @@
 body {
-  --headerHeight: 8rem;
+  --headerHeight: 5rem;
+  --navbarHeight: 3rem;
   --footerHeight: 3rem;
   --shadow: 0px 1px 5px 1px hsla(0, 0%, 0%, 0.2);
   --indexTop: 900;
