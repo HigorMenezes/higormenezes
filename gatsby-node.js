@@ -1,7 +1,90 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require("path")
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  const PostList = path.resolve(`./src/templates/PostList.js`)
+  const PostItem = path.resolve(`./src/templates/PostItem.js`)
+
+  createPage({
+    path: "/posts/",
+    component: PostList,
+    context: {
+      langKey: "pt-br",
+    },
+  })
+
+  return graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+                langKey
+                directoryName
+              }
+            }
+          }
+        }
+      }
+    `
+  ).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
+
+    const posts = result.data.allMarkdownRemark.edges
+
+    posts.forEach(({ node }) => {
+      const slug = (node && node.fields && node.fields.slug) || ""
+      const langKey = (node && node.fields && node.fields.langKey) || "pt-br"
+
+      createPage({
+        path: slug,
+        component: PostItem,
+        context: {
+          slug: slug,
+          langKey: langKey,
+        },
+      })
+    })
+  })
+}
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+
+  if (
+    node &&
+    node.internal &&
+    node.internal.type &&
+    node.internal.type === `MarkdownRemark`
+  ) {
+    const fileAbsolutePath = node.fileAbsolutePath || ""
+
+    const directoryName = path.basename(path.dirname(fileAbsolutePath))
+    const fileName = path.basename(fileAbsolutePath)
+
+    createNodeField({
+      node,
+      name: "directoryName",
+      value: directoryName,
+    })
+
+    createNodeField({
+      node,
+      name: "langKey",
+      value: fileName.split(".")[1],
+    })
+
+    createNodeField({
+      node,
+      name: "slug",
+      value: `/posts/${directoryName}`,
+    })
+  }
+}

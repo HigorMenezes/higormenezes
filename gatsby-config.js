@@ -4,6 +4,7 @@ module.exports = {
     description: `Just a blog to share my programmer's life`,
     author: `higormenezes`,
   },
+  pathPrefix: "/me",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -11,6 +12,19 @@ module.exports = {
       options: {
         name: `assets`,
         path: `${__dirname}/src/assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [],
       },
     },
     `gatsby-transformer-sharp`,
@@ -36,6 +50,13 @@ module.exports = {
             description: `Just a blog to share my programmer's life`,
           },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "pt-br",
+        useLangKeyLayout: true,
       },
     },
     `gatsby-plugin-offline`,

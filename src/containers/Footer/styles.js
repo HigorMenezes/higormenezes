@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
   position: fixed;
   top: 100%;
   left: 0%;
-  transform: translateY(-100%);
+  margin-top: calc(-1 * var(--footerHeight));
   z-index: var(--indexTop);
 
   display: flex;
