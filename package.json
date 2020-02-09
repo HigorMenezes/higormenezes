@@ -1,11 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "higormenezes",
+  "description": "Just a blog to share my programmer's life",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "higormenezes <higormenezes1996@gmail.com>",
   "dependencies": {
-    "date-fns": "^2.9.0",
     "gatsby": "^2.19.12",
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-dark-mode": "^1.1.0",
@@ -36,7 +34,7 @@
     "prettier": "^1.19.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby", "blog", "personal website"
   ],
   "license": "MIT",
   "scripts": {
@@ -50,9 +48,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/HigorMenezes/higormenezes"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/HigorMenezes/higormenezes/issues"
   }
 }
