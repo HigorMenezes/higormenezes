@@ -2,15 +2,14 @@ import React from "react"
 
 import MainLayout from "../layouts/MainLayout"
 import SEO from "../components/SEO"
-import CustomLink from "../components/CustomLink"
 
 const IndexPage = () => (
   <MainLayout>
-    <SEO title="Home" />
+    <SEO title="Home" lang="pt-BR" />
     <h1>
       Olá pessoas{" "}
       <span role="img" aria-label="feliz">
-        😝
+        😁
       </span>
     </h1>
     <p>
@@ -47,13 +46,10 @@ const IndexPage = () => (
       >
         gitHub
       </a>
-      . Caso queira fazer o seu site pessoal, eu apoio cem porcento{" "}
-      <span role="img" aria-label="cem">
-        💯
-      </span>{" "}
-      essa decisão e não vejo problema algum em utilizar o meu como base{" "}
-      <span role="img" aria-label="feliz">
-        😁
+      . Caso queira fazer o seu site pessoal, eu apoio cem porcento essa decisão
+      e não vejo problema algum em utilizar o meu como base{" "}
+      <span role="img" aria-label="joinha">
+        👍
       </span>
       .
     </p>

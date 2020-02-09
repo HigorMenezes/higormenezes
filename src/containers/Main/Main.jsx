@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react"
 
-import { MainContainer } from './styles';
+import { MainContainer } from "./styles"
 
-const Main = (props) => <MainContainer {...props} />;
+const Main = props => <MainContainer {...props} />
 
-export default Main;
+export default Main
