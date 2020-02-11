@@ -11,7 +11,7 @@ export const PostListItemContainer = styled(Link)`
   transition: border 0.3s, box-shadow 0.3s;
 
   &:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   &:hover {
