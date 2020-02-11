@@ -1,7 +1,8 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import MainLayout from "../layouts/MainLayout"
 import SEO from "../components/SEO"
+import PostListItem from "../components/PostListItem"
 
 const PostList = ({ data, pageContext }) => {
   const langKey = (pageContext && pageContext.langKey) || "pt-br"
@@ -14,22 +15,23 @@ const PostList = ({ data, pageContext }) => {
       {posts.map(({ node }) => {
         const title = (node && node.frontmatter && node.frontmatter.title) || ""
         const slug = (node && node.fields && node.fields.slug) || ""
+        const formatedDate =
+          (node && node.frontmatter && node.frontmatter.formatedDate) || ""
+        const date = (node && node.frontmatter && node.frontmatter.date) || ""
+        const timeToRead = (node && node.timeToRead) || 0
+        const spoiler =
+          (node && node.frontmatter && node.frontmatter.spoiler) || ""
 
         return (
-          <article key={slug}>
-            <header>
-              <h3>
-                <Link to={node.fields.slug}>{title}</Link>
-              </h3>
-              <small>
-                {node.frontmatter.date}
-                {` • ${node.timeToRead}`}
-              </small>
-            </header>
-            <p>
-              {(node && node.frontmatter && node.frontmatter.spoiler) || ""}
-            </p>
-          </article>
+          <PostListItem
+            key={slug}
+            slug={slug}
+            title={title}
+            spoiler={spoiler}
+            formatedDate={formatedDate}
+            date={date}
+            timeToRead={timeToRead}
+          />
         )
       })}
     </MainLayout>
@@ -52,7 +54,8 @@ export const getAllPosts = graphql`
           }
           timeToRead
           frontmatter {
-            date(locale: $langKey, formatString: "DD MMMM, YYYY")
+            formatedDate: date(locale: $langKey, formatString: "DD MMMM, YYYY")
+            date
             title
             spoiler
           }

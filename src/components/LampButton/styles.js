@@ -24,7 +24,7 @@ export const Button = styled.button`
   }
 
   &.light::after {
-    box-shadow: 0 0 8px 8px yellow, 0 0 30px 20px yellow;
+    box-shadow: 0 0 0.5rem 0.5rem yellow, 0 0 2rem 1.3rem yellow;
   }
 `
 
