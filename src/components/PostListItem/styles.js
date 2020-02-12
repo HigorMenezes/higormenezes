@@ -2,7 +2,6 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const PostListItemContainer = styled(Link)`
-  position: relative;
   width: 100%;
   padding: 1rem;
   border: 0.05rem solid var(--hr);

@@ -9,8 +9,10 @@ import "../../styles/variables.css"
 import "../../styles/reset.css"
 import "../../styles/typography.css"
 import "../../styles/global.css"
+import "../../styles/customPrismjs.css"
+import "../../styles/remarkAutolink.css"
 
-import { Container, HeaderContainer } from "./styles"
+import { Container } from "./styles"
 
 const MainLayout = ({ children }) => {
   const data = useStaticQuery(graphql`

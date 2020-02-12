@@ -14,6 +14,8 @@ body.light {
   --textLink: #4ea2b7;
   --textLinkHover: #377585;
   --hr: hsla(0, 0%, 0%, 0.2);
+  --bgInlineCode: rgba(255, 255, 150, 0.4);
+  --inlineCodeText: #3d3d3d;
 }
 
 body.dark {
@@ -24,4 +26,6 @@ body.dark {
   --textLink: #67d1eb;
   --textLinkHover: #beeaf9;
   --hr: hsla(0, 0%, 100%, 0.2);
+  --bgInlineCode: rgba(150, 150, 150, 0.2);
+  --inlineCodeText: #eeeeee;
 }

@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import formatTimeToRead from "../../helpers/formatTimeToRead"
 
 import {
@@ -9,7 +8,6 @@ import {
   Title,
   Spoiler,
   Small,
-  Time,
 } from "./styles"
 
 const PostListItem = ({
@@ -27,7 +25,7 @@ const PostListItem = ({
       </Header>
       <Spoiler>{spoiler}</Spoiler>
       <Small>
-        <time datetime={date} pubdate>
+        <time dateTime={date} pubdate="true">
           {formatedDate}
         </time>
         <div>{formatTimeToRead(timeToRead)}</div>

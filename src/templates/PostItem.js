@@ -2,27 +2,29 @@ import React from "react"
 import { graphql } from "gatsby"
 import MainLayout from "../layouts/MainLayout"
 import SEO from "../components/SEO"
+import Post from "../components/Post"
 
 const PostItem = ({ data, pageContext }) => {
   const langKey = (pageContext && pageContext.langKey) || "pt-br"
   const post = (data && data.markdownRemark) || {}
-  const title = post && post.frontmatter && post.frontmatter.title
+  const title = (post && post.frontmatter && post.frontmatter.title) || ""
+  const date = (post && post.frontmatter && post.frontmatter.date) || ""
+  const formatedDate =
+    (post && post.frontmatter && post.frontmatter.formatedDate) || ""
   const html = (post && post.html) || ""
+  const timeToRead = (post && post.timeToRead) || 0
 
   return (
     <MainLayout>
       <SEO title={title} lang={langKey} />
 
-      <article>
-        <header>
-          <h1>{title}</h1>
-          <p>
-            {post.frontmatter.date}
-            {` • ${post.timeToRead}`}
-          </p>
-        </header>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </article>
+      <Post
+        title={title}
+        formatedDate={formatedDate}
+        date={date}
+        timeToRead={timeToRead}
+        html={html}
+      />
     </MainLayout>
   )
 }
@@ -35,7 +37,8 @@ export const getPostBySlug = graphql`
       timeToRead
       frontmatter {
         title
-        date(locale: $langKey, formatString: "DD MMMM, YYYY")
+        date
+        formatedDate: date(locale: $langKey, formatString: "DD MMMM, YYYY")
         spoiler
       }
       fields {
