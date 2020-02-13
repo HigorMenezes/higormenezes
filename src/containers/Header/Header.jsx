@@ -12,15 +12,13 @@ import {
   RightArrow,
 } from "./styles"
 
-import useScroll from "../../hooks/useScroll"
-import checkShouldShowHeader from "../../helpers/checkShouldShowHeader"
+import useHideHeader from "../../hooks/useHideHeader"
 
 const Header = ({ siteTitle }) => {
-  const { delta, distanceFromTop } = useScroll()
-  const shouldShowHeader = checkShouldShowHeader({ delta, distanceFromTop })
+  const { hide } = useHideHeader()
 
   return (
-    <HeaderContainer className={shouldShowHeader ? "show" : "hide"}>
+    <HeaderContainer className={hide ? "hide" : "show"}>
       <HeaderContent>
         <HeaderTitle>
           <Avatar />

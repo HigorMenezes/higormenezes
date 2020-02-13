@@ -1,10 +1,10 @@
 {
   "name": "higormenezes",
   "description": "Just a blog to share my programmer's life",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "higormenezes <higormenezes1996@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.19.12",
+    "gatsby": "^2.19.16",
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-dark-mode": "^1.1.0",
     "gatsby-plugin-i18n": "^1.0.1",
