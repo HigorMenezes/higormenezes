@@ -12,7 +12,7 @@ export const NavigationList = styled.ul`
 
 export const NavigationItem = styled.li`
   list-style: none;
-  padding: 0.2rem 0.5rem;
+  padding: 0.1rem 0.3rem;
   margin: 0;
 
   &:not(:last-child) {
@@ -23,4 +23,5 @@ export const NavigationItem = styled.li`
 export const NavigationLink = styled(CustomLink)`
   text-transform: capitalize;
   font-weight: 500;
+  padding: 0.1rem 0.2rem;
 `

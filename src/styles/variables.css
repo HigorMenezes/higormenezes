@@ -11,8 +11,8 @@ body.light {
   --bgTransparent: rgba(255, 251, 254, 0.9);
   --textNormal: rgba(30, 30, 30, 0.65);
   --textTitle: rgba(30, 30, 30, 0.85);
-  --textLink: #4ea2b7;
-  --textLinkHover: #377585;
+  --textLink: #448b9e;
+  --textLinkHover: #2d626f;
   --hr: hsla(0, 0%, 0%, 0.2);
   --bgInlineCode: rgba(255, 255, 150, 0.4);
   --inlineCodeText: #3d3d3d;

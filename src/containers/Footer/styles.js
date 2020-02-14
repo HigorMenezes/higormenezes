@@ -27,6 +27,8 @@ export const Link = styled.a.attrs({ target: "_blank" })`
   align-items: center;
   justify-content: center;
 
+  user-select: none;
+
   cursor: pointer;
 `
 

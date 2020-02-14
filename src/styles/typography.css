@@ -105,17 +105,21 @@ dt {
 }
 
 a:link,
-a:visited,
+a:visited {
+  color: var(--textLink);
+  text-decoration: none;
+}
+
 a:hover,
 a:focus,
 a:active {
-  color: var(--textLink);
+  color: var(--textLinkHover);
   text-decoration: none;
 }
 
 hr {
   margin: 1.3846em 0 1.308em 0;
   height: 0;
-  border: 1px solid #888;
+  border: 1px solid var(--hr);
   border-width: 1px 0 0 0;
 }
