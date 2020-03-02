@@ -1,6 +1,6 @@
 const routes = [
   {
-    name: "Home",
+    name: "Hello",
     to: "/",
   },
   {

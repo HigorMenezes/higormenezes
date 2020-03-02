@@ -5,9 +5,13 @@ import SEO from "../components/SEO";
 
 const IndexPage = () => (
   <MainLayout>
-    <SEO title="Home" lang="pt-BR" />
+    <SEO
+      title="Hello, my friends"
+      description="Que tal saber um pouco sobre meu intúito com este blog"
+      lang="pt-BR"
+    />
     <h1>
-      Olá pessoas{" "}
+      Olá pessoas&nbsp;
       <span role="img" aria-label="feliz">
         😁
       </span>
@@ -19,26 +23,26 @@ const IndexPage = () => (
     </p>
     <p>
       O site possui duas paletas de cores, escura e clara, caso a que esteja
-      utilizando nesse momento esteja incomodando seus olhos{" "}
+      utilizando nesse momento esteja incomodando seus olhos&nbsp;
       <span role="img" aria-label="olhos">
         👀
       </span>
-      , clique na lâmpada{" "}
+      , clique na lâmpada&nbsp;
       <span role="img" aria-label="lâmpada">
         💡
-      </span>{" "}
-      a direita do cabeçalho{" "}
+      </span>
+      &nbsp;a direita do cabeçalho&nbsp;
       <span role="img" aria-label="seta na diagonal direita superior">
         ↗
-      </span>{" "}
-      .
+      </span>
+      &nbsp;.
     </p>
     <p>
-      Todo o desenvolvimento desse site é de código aberto{" "}
+      Todo o desenvolvimento desse site é de código aberto&nbsp;
       <span role="img" aria-label="festa">
         🎉
-      </span>{" "}
-      e está disponível no meu{" "}
+      </span>
+      &nbsp;e está disponível no meu&nbsp;
       <a
         href="https://github.com/HigorMenezes/higormenezes"
         target="_blank"
@@ -47,7 +51,7 @@ const IndexPage = () => (
         gitHub
       </a>
       . Caso queira fazer o seu site pessoal, eu apoio cem porcento essa decisão
-      e não vejo problema algum em utilizar o meu como base{" "}
+      e não vejo problema algum em utilizar o meu como base&nbsp;
       <span role="img" aria-label="joinha">
         👍
       </span>
@@ -60,7 +64,7 @@ const IndexPage = () => (
     </p>
     <p>
       Para entrar em contato comigo, minhas redes sociais estão no rodapé, logo
-      aqui embaixo{" "}
+      aqui embaixo&nbsp;
       <span role="img" aria-label="seta para baixo">
         ⬇
       </span>

@@ -9,11 +9,11 @@ const PostItem = ({ data, pageContext }) => {
   const { langKey } = pageContext;
   const post = data.markdownRemark;
   const { html, timeToRead } = post;
-  const { title, date, formatedDate } = post.frontmatter;
+  const { title, spoiler, date, formatedDate } = post.frontmatter;
 
   return (
     <MainLayout>
-      <SEO title={title} lang={langKey} />
+      <SEO title={title} description={spoiler} lang={langKey} />
       <Post
         title={title}
         formatedDate={formatedDate}

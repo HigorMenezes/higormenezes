@@ -4,9 +4,13 @@ import SEO from "../components/SEO";
 
 const MePage = () => (
   <MainLayout>
-    <SEO title="Me" lang="pt-BR" />
+    <SEO
+      title="It's me, Higor"
+      description="Que tal me conhecer um pouco melhor"
+      lang="pt-BR"
+    />
     <h1>
-      It's me, myself and I{" "}
+      It&rsquo;s me, myself and I&nbsp;
       <span role="img" aria-label="musica">
         🎶
       </span>
@@ -31,10 +35,11 @@ const MePage = () => (
       fantástica de aprender.
     </p>
     <p>
-      E bem, uma frase que levo para a minha vida é:{" "}
-      <i>"Ninguém poderá dizer que eu não tentei"</i>; Não sei se essa frase tem
-      um autor específico, mas com certeza ela me motiva a sempre continuar em
-      frente e assim poder estar cada vez mais próximo dos meus objetivos.
+      E bem, uma frase que levo para a minha vida é:&nbsp;
+      <i>&ldquo;Ninguém poderá dizer que eu não tentei&rdquo;</i>; Não sei se
+      essa frase tem um autor específico, mas com certeza ela me motiva a sempre
+      continuar em frente e assim poder estar cada vez mais próximo dos meus
+      objetivos.
     </p>
   </MainLayout>
 );

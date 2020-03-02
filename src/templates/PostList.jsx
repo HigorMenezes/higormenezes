@@ -11,7 +11,11 @@ const PostList = ({ data, pageContext }) => {
 
   return (
     <MainLayout>
-      <SEO title="Postagens" lang={langKey} />
+      <SEO
+        title="Póstis"
+        description="Apenas que... Busquem conhecimento"
+        lang={langKey}
+      />
       {posts.map(({ node }) => {
         const { timeToRead } = node;
         const { slug } = node.fields;

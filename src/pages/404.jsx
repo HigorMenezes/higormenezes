@@ -5,16 +5,16 @@ import SEO from "../components/SEO";
 
 const NotFoundPage = () => (
   <MainLayout>
-    <SEO title="404: Not found" lang="pt-BR" />
+    <SEO title="Not found" description="Vish, deu ruim" lang="pt-BR" />
     <h1>
-      Vish, deu ruim{" "}
+      Vish, deu ruim&nbsp;
       <span role="img" aria-label="desconfortável">
         😖
       </span>
     </h1>
     <p>
       Infelizmente o conteúdo que está buscando se encontra indisponível ou fora
-      da área de cobertura{" "}
+      da área de cobertura&nbsp;
       <span role="img" aria-label="chorar">
         😭
       </span>

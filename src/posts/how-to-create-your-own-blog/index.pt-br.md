@@ -1,7 +1,7 @@
 ---
 title: Como criar seu próprio blog
 date: "2020-02-09"
-spoiler: Como você pode criar seu blog utilizando GatsbyJS.
+spoiler: Eai, já pensou em criar seu próprio blog e compartilhar um pouco de seu conhecimento?
 ---
 
 Gatsby é uma framework incrível, e muito simples de utilizar que pode te ajudar muito na criação do seu próprio blog. Uma das vantagem dessa tecnologia é o fato de você poder escrever seus blogs utilizando markdown e utilizando alguns plugs e transformá-los em HTML, e com um bom CSS poder deixar isso incrível.
@@ -35,6 +35,3 @@ gatsby new nome-do-seu-projeto
 Esse comando criará um projeto inicial de exemplo, como a nossa ideia é a criação de um blog, grande parte do projeto inicial será descartado.
 
 ### Eliminando arquivos desnecessários
-
-
-
