@@ -4,7 +4,7 @@ module.exports = {
     description: `Just a blog to share my programmer's life`,
     author: `higormenezes`,
   },
-  pathPrefix: "/me",
+  pathPrefix: "/",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -50,7 +50,7 @@ module.exports = {
               inlineCodeMarker: `÷`,
             },
           },
-          `gatsby-remark-copy-linked-files`, //maybe remove it
+          `gatsby-remark-copy-linked-files`, // maybe remove it
           `gatsby-remark-smartypants`,
           {
             resolve: `gatsby-remark-external-links`,
