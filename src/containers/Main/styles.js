@@ -4,7 +4,7 @@ export const MainContainer = styled.main`
   width: 100%;
   height: 100%;
   max-width: 40rem;
-  padding: 1.5rem 1rem 0.5rem 1rem;
+  padding: 1.5rem 1.3125rem 0.5rem;
   margin-top: calc(var(--headerHeight) + var(--navbarHeight));
   margin-bottom: var(--footerHeight);
 

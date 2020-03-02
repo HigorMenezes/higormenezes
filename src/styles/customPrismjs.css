@@ -157,3 +157,9 @@ blockquote {
   -webkit-overflow-scrolling: touch;
   overflow: auto;
 }
+
+@media (max-width: 800px) {
+  .gatsby-highlight {
+    border-radius: 0;
+  }
+}
