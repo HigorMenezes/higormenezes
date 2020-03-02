@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { Lightbulb } from "styled-icons/fa-regular/Lightbulb"
+import styled from "styled-components";
+import { Lightbulb } from "styled-icons/fa-regular/Lightbulb";
 
 export const Button = styled.button`
   position: relative;
@@ -26,9 +26,9 @@ export const Button = styled.button`
   &.light::after {
     box-shadow: 0 0 0.5rem 0.5rem yellow, 0 0 2rem 1.3rem yellow;
   }
-`
+`;
 
 export const Lamp = styled(Lightbulb)`
   height: 100%;
   color: var(--textNormal);
-`
+`;

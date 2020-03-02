@@ -1,9 +1,9 @@
-const path = require("path")
+const path = require("path");
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-  const PostList = path.resolve(`./src/templates/PostList.js`)
-  const PostItem = path.resolve(`./src/templates/PostItem.js`)
+  const { createPage } = actions;
+  const PostList = path.resolve(`./src/templates/PostList.jsx`);
+  const PostItem = path.resolve(`./src/templates/PostItem.jsx`);
 
   createPage({
     path: "/posts/",
@@ -11,7 +11,7 @@ exports.createPages = ({ graphql, actions }) => {
     context: {
       langKey: "pt-br",
     },
-  })
+  });
 
   return graphql(
     `
@@ -34,29 +34,29 @@ exports.createPages = ({ graphql, actions }) => {
     `
   ).then(result => {
     if (result.errors) {
-      throw result.errors
+      throw result.errors;
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(({ node }) => {
-      const slug = (node && node.fields && node.fields.slug) || ""
-      const langKey = (node && node.fields && node.fields.langKey) || "pt-br"
+      const slug = (node && node.fields && node.fields.slug) || "";
+      const langKey = (node && node.fields && node.fields.langKey) || "pt-br";
 
       createPage({
         path: slug,
         component: PostItem,
         context: {
-          slug: slug,
-          langKey: langKey,
+          slug,
+          langKey,
         },
-      })
-    })
-  })
-}
+      });
+    });
+  });
+};
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions;
 
   if (
     node &&
@@ -64,27 +64,27 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     node.internal.type &&
     node.internal.type === `MarkdownRemark`
   ) {
-    const fileAbsolutePath = node.fileAbsolutePath || ""
+    const fileAbsolutePath = node.fileAbsolutePath || "";
 
-    const directoryName = path.basename(path.dirname(fileAbsolutePath))
-    const fileName = path.basename(fileAbsolutePath)
+    const directoryName = path.basename(path.dirname(fileAbsolutePath));
+    const fileName = path.basename(fileAbsolutePath);
 
     createNodeField({
       node,
       name: "directoryName",
       value: directoryName,
-    })
+    });
 
     createNodeField({
       node,
       name: "langKey",
       value: fileName.split(".")[1],
-    })
+    });
 
     createNodeField({
       node,
       name: "slug",
       value: `/posts/${directoryName}`,
-    })
+    });
   }
-}
+};

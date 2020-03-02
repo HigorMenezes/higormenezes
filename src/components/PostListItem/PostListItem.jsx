@@ -1,5 +1,6 @@
-import React from "react"
-import formatTimeToRead from "../../helpers/formatTimeToRead"
+import React from "react";
+import PropTypes from "prop-types";
+import formatTimeToRead from "../../helpers/formatTimeToRead";
 
 import {
   PostListItemContainer,
@@ -8,7 +9,7 @@ import {
   Title,
   Spoiler,
   Small,
-} from "./styles"
+} from "./styles";
 
 const PostListItem = ({
   slug,
@@ -32,6 +33,24 @@ const PostListItem = ({
       </Small>
     </Article>
   </PostListItemContainer>
-)
+);
 
-export default PostListItem
+PostListItem.defaultProps = {
+  slug: "/",
+  title: "",
+  spoiler: "",
+  formatedDate: "",
+  date: "",
+  timeToRead: 0,
+};
+
+PostListItem.propTypes = {
+  slug: PropTypes.string,
+  title: PropTypes.string,
+  spoiler: PropTypes.string,
+  formatedDate: PropTypes.string,
+  date: PropTypes.string,
+  timeToRead: PropTypes.number,
+};
+
+export default PostListItem;

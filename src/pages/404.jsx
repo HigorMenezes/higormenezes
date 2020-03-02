@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
-import MainLayout from "../layouts/MainLayout"
-import SEO from "../components/SEO"
+import MainLayout from "../layouts/MainLayout";
+import SEO from "../components/SEO";
 
 const NotFoundPage = () => (
   <MainLayout>
@@ -21,6 +21,6 @@ const NotFoundPage = () => (
       , por favor, tente mais tarde.
     </p>
   </MainLayout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

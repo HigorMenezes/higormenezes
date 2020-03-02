@@ -1,8 +1,8 @@
-import React from "react"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import Img from "gatsby-image";
+import { useStaticQuery, graphql } from "gatsby";
 
-import { AvatarContainer } from "./styles"
+import { AvatarContainer } from "./styles";
 
 const Avatar = () => {
   const data = useStaticQuery(graphql`
@@ -15,7 +15,7 @@ const Avatar = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <AvatarContainer>
@@ -26,7 +26,7 @@ const Avatar = () => {
         style={{ top: "-10px" }}
       />
     </AvatarContainer>
-  )
-}
+  );
+};
 
-export default React.memo(Avatar)
+export default React.memo(Avatar);

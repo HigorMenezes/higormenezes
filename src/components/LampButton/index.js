@@ -1,1 +1,1 @@
-export { default } from "./LampButton"
+export { default } from "./LampButton";

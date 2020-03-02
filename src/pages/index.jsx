@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
-import MainLayout from "../layouts/MainLayout"
-import SEO from "../components/SEO"
+import MainLayout from "../layouts/MainLayout";
+import SEO from "../components/SEO";
 
 const IndexPage = () => (
   <MainLayout>
@@ -67,6 +67,6 @@ const IndexPage = () => (
       .
     </p>
   </MainLayout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

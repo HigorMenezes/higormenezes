@@ -1,7 +1,7 @@
-import React from "react"
-import Avatar from "../../components/Avatar"
-import DarkLightToggle from "../../components/DarkLightToggle"
-import NavigationBar from "../../components/NavigationBar"
+import React from "react";
+import Avatar from "../../components/Avatar";
+import DarkLightToggle from "../../components/DarkLightToggle";
+import NavigationBar from "../../components/NavigationBar";
 
 import {
   HeaderContainer,
@@ -10,12 +10,12 @@ import {
   HeaderNavigation,
   Title,
   RightArrow,
-} from "./styles"
+} from "./styles";
 
-import useHideHeader from "../../hooks/useHideHeader"
+import useHideHeader from "../../hooks/useHideHeader";
 
 const Header = ({ siteTitle }) => {
-  const { hide } = useHideHeader()
+  const { hide } = useHideHeader();
 
   return (
     <HeaderContainer className={hide ? "hide" : "show"}>
@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => {
         </HeaderNavigation>
       </HeaderContent>
     </HeaderContainer>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

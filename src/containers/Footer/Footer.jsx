@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import { FooterContainer, Link, GithubIcon, LinkedInIcon } from "./styles"
+import { FooterContainer, Link, GithubIcon, LinkedInIcon } from "./styles";
 
 const Footer = () => (
   <FooterContainer>
@@ -13,6 +13,6 @@ const Footer = () => (
       <span>LinkedIn</span>
     </Link>
   </FooterContainer>
-)
+);
 
-export default Footer
+export default Footer;

@@ -1,7 +1,7 @@
-import React from "react"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
+import React from "react";
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
 
-import LampButton from "../LampButton"
+import LampButton from "../LampButton";
 
 const DarkLightToggle = () => (
   <ThemeToggler>
@@ -12,6 +12,6 @@ const DarkLightToggle = () => (
       />
     )}
   </ThemeToggler>
-)
+);
 
-export default React.memo(DarkLightToggle)
+export default React.memo(DarkLightToggle);

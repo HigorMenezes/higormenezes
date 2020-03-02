@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { Link } from "gatsby"
+import styled from "styled-components";
+import { Link } from "gatsby";
 
 export const LinkContainer = styled(Link)`
   position: relative;
@@ -27,4 +27,4 @@ export const LinkContainer = styled(Link)`
     background-color: var(--textLink);
     transition: height 0.2s;
   }
-`
+`;

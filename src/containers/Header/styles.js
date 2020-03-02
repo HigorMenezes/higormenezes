@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import media from "styled-media-query"
-import { RightArrowAlt } from "styled-icons/boxicons-regular/RightArrowAlt"
+import styled from "styled-components";
+import media from "styled-media-query";
+import { RightArrowAlt } from "styled-icons/boxicons-regular/RightArrowAlt";
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -24,7 +24,7 @@ export const HeaderContainer = styled.header`
   &.hide {
     margin-top: calc(-1 * var(--headerHeight));
   }
-`
+`;
 
 export const HeaderContent = styled.div`
   width: 100%;
@@ -36,7 +36,7 @@ export const HeaderContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-`
+`;
 
 export const HeaderTitle = styled.div`
   width: 100%;
@@ -45,7 +45,7 @@ export const HeaderTitle = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`
+`;
 
 export const Title = styled.h1`
   width: 100%;
@@ -53,7 +53,7 @@ export const Title = styled.h1`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-`
+`;
 
 export const HeaderNavigation = styled.nav`
   width: 100%;
@@ -68,9 +68,9 @@ export const HeaderNavigation = styled.nav`
   ${media.greaterThan("small")`
     padding-left: 5rem;
   `}
-`
+`;
 
 export const RightArrow = styled(RightArrowAlt)`
   width: 1.5rem;
   color: var(--textLink);
-`
+`;

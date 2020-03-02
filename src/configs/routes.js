@@ -11,6 +11,6 @@ const routes = [
     name: "Posts",
     to: "/posts/",
   },
-]
+];
 
-export default routes
+export default routes;

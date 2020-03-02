@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import media from "styled-media-query"
+import styled from "styled-components";
+import media from "styled-media-query";
 
 export const AvatarContainer = styled.div`
   min-width: 3rem;
@@ -15,4 +15,4 @@ export const AvatarContainer = styled.div`
   ${media.greaterThan("small")`
     display: block;
   `}
-`
+`;

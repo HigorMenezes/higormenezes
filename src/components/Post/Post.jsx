@@ -1,7 +1,8 @@
-import React from "react"
-import formatTimeToRead from "../../helpers/formatTimeToRead"
+import React from "react";
+import PropTypes from "prop-types";
+import formatTimeToRead from "../../helpers/formatTimeToRead";
 
-import { PostContainer, Header, Title, Small, HeaderSeparator } from "./styles"
+import { PostContainer, Header, Title, Small } from "./styles";
 
 const Post = ({ title, formatedDate, date, timeToRead, html }) => (
   <PostContainer>
@@ -16,6 +17,22 @@ const Post = ({ title, formatedDate, date, timeToRead, html }) => (
     </Header>
     <div dangerouslySetInnerHTML={{ __html: html }} />
   </PostContainer>
-)
+);
 
-export default Post
+Post.defaultProps = {
+  title: "",
+  formatedDate: "",
+  date: "",
+  timeToRead: 0,
+  html: "",
+};
+
+Post.propTypes = {
+  title: PropTypes.string,
+  formatedDate: PropTypes.string,
+  date: PropTypes.string,
+  timeToRead: PropTypes.number,
+  html: PropTypes.string,
+};
+
+export default Post;

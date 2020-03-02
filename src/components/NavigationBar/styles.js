@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import CustomLink from "../CustomLink"
+import styled from "styled-components";
+import CustomLink from "../CustomLink";
 
 export const NavigationList = styled.ul`
   width: 100%;
@@ -8,7 +8,7 @@ export const NavigationList = styled.ul`
   align-items: center;
   justify-content: flex-start;
   margin: 0;
-`
+`;
 
 export const NavigationItem = styled.li`
   list-style: none;
@@ -18,10 +18,10 @@ export const NavigationItem = styled.li`
   &:not(:last-child) {
     margin-right: 1rem;
   }
-`
+`;
 
 export const NavigationLink = styled(CustomLink)`
   text-transform: capitalize;
   font-weight: 500;
   padding: 0.1rem 0.2rem;
-`
+`;

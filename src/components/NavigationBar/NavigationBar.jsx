@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
-import routes from "../../configs/routes"
-import { NavigationList, NavigationItem, NavigationLink } from "./styles"
+import routes from "../../configs/routes";
+import { NavigationList, NavigationItem, NavigationLink } from "./styles";
 
 const NavigationBar = () => (
   <NavigationList>
@@ -11,6 +11,6 @@ const NavigationBar = () => (
       </NavigationItem>
     ))}
   </NavigationList>
-)
+);
 
-export default React.memo(NavigationBar)
+export default React.memo(NavigationBar);

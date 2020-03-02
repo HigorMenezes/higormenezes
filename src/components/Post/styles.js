@@ -1,8 +1,8 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const PostContainer = styled.article`
   width: 100%;
-`
+`;
 
 export const Small = styled.small`
   display: flex;
@@ -12,7 +12,7 @@ export const Small = styled.small`
     content: "•";
     padding: 0rem 0.3rem;
   }
-`
+`;
 
 export const Header = styled.header`
   width: 100%;
@@ -26,11 +26,11 @@ export const Header = styled.header`
     letter-spacing: 0.5rem;
     margin-top: 1rem;
   }
-`
+`;
 
 export const Title = styled.h1`
   width: 100%;
   font-size: 1.7rem;
   margin-bottom: 0.5rem;
   color: var(--textTitle);
-`
+`;

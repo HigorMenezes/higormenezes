@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components"
-import { Linkedin } from "styled-icons/fa-brands/Linkedin"
-import { Github } from "styled-icons/fa-brands/Github"
+import styled, { css } from "styled-components";
+import { Linkedin } from "styled-icons/fa-brands/Linkedin";
+import { Github } from "styled-icons/fa-brands/Github";
 
 export const FooterContainer = styled.footer`
   width: 100%;
@@ -18,7 +18,7 @@ export const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;
 
 export const Link = styled.a.attrs({ target: "_blank" })`
   padding: 0.2rem 0.5rem;
@@ -30,18 +30,18 @@ export const Link = styled.a.attrs({ target: "_blank" })`
   user-select: none;
 
   cursor: pointer;
-`
+`;
 
 const commonIcon = css`
   height: 1.5rem;
   color: var(--normalText);
   padding: 0.2rem;
-`
+`;
 
 export const LinkedInIcon = styled(Linkedin)`
   ${commonIcon}
-`
+`;
 
 export const GithubIcon = styled(Github)`
   ${commonIcon}
-`
+`;

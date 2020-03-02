@@ -1,6 +1,6 @@
-import React from "react"
-import MainLayout from "../layouts/MainLayout"
-import SEO from "../components/SEO"
+import React from "react";
+import MainLayout from "../layouts/MainLayout";
+import SEO from "../components/SEO";
 
 const MePage = () => (
   <MainLayout>
@@ -37,6 +37,6 @@ const MePage = () => (
       frente e assim poder estar cada vez mais próximo dos meus objetivos.
     </p>
   </MainLayout>
-)
+);
 
-export default MePage
+export default MePage;
