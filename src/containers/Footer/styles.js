@@ -20,7 +20,10 @@ export const FooterContainer = styled.footer`
   justify-content: center;
 `;
 
-export const Link = styled.a.attrs({ target: "_blank" })`
+export const Link = styled.a.attrs({
+  target: "_blank",
+  rel: "noopener noreferrer",
+})`
   padding: 0.2rem 0.5rem;
 
   display: flex;

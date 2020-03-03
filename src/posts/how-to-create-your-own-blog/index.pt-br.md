@@ -35,3 +35,4 @@ gatsby new nome-do-seu-projeto
 Esse comando criará um projeto inicial de exemplo, como a nossa ideia é a criação de um blog, grande parte do projeto inicial será descartado.
 
 ### Eliminando arquivos desnecessários
+
