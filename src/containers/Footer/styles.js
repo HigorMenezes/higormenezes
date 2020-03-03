@@ -10,9 +10,8 @@ export const FooterContainer = styled.footer`
   background-color: var(--bgTransparent);
 
   position: fixed;
-  top: 100%;
+  bottom: 0%;
   left: 0%;
-  margin-top: calc(-1 * var(--footerHeight));
   z-index: var(--indexTop);
 
   display: flex;
