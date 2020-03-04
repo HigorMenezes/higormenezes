@@ -47,12 +47,13 @@ export const Header = styled.header`
 export const Title = styled.h3`
   width: 100%;
   font-size: 1.7rem;
+  margin-top: 0;
   margin-bottom: 0.5rem;
   color: var(--textTitle);
 `;
 
 export const Spoiler = styled.p`
   color: var(--textNormal);
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0rem;
   padding-left: 0.5rem;
 `;

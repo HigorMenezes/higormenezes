@@ -29,6 +29,7 @@ pre[class*="language-"] {
 pre[class*="language-"] {
   overflow: auto;
   padding: 1.3125rem;
+  margin: 0;
 }
 
 pre[class*="language-"]::-moz-selection {
