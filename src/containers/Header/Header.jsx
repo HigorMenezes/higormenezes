@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Avatar from "../../components/Avatar";
 import DarkLightToggle from "../../components/DarkLightToggle";
 import NavigationBar from "../../components/NavigationBar";
@@ -32,6 +33,10 @@ const Header = ({ siteTitle }) => {
       </HeaderContent>
     </HeaderContainer>
   );
+};
+
+Header.propTypes = {
+  siteTitle: PropTypes.string.isRequired,
 };
 
 export default Header;

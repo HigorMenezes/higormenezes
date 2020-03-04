@@ -49,6 +49,7 @@ export const HeaderTitle = styled.div`
 
 export const Title = styled.h1`
   width: 100%;
+  padding: 0.2rem;
   margin: 0.5rem;
   text-overflow: ellipsis;
   white-space: nowrap;
