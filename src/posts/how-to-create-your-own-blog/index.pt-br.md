@@ -18,7 +18,7 @@ Para desenvolver o este blog, foi utilizado as seguintes tecnologias e suas vers
 
 Vale ressaltar que caso esteja utilizando versões diferentes das tecnologias pode ser que alguns passos para a criação do blog seja diferente, mas nada que uma boa pesquise não resolva seu problema, portanto, utilize a versão que te deixe mais confortável.
 
-### Iniciando o projeto
+###Iniciando o projeto
 
 Para iniciar o projeto, primeiro precisamos instalar a CLI do GatsbyJS.
 
@@ -34,5 +34,59 @@ gatsby new nome-do-seu-projeto
 
 Esse comando criará um projeto inicial de exemplo, como a nossa ideia é a criação de um blog, grande parte do projeto inicial será descartado.
 
-### Eliminando arquivos desnecessários
+###Projeto iniciado
 
+A estrutura do projeto gerado pelo é a seguinte, podendo se diferenciar de acordo com a versão utilizada.
+
+```text
+.
++-- node_modules
+|    ...
++-- src
+|  +-- components
+|    ...
+|  +-- images
+|    ...
+|  +-- pages
+|    ...
++-- .gitignore
++-- .prettierignore
++-- .prettierrc
++-- gatsby-browser.js
++-- gatsby-config.js
++-- gatsby-node.js
++-- gatsby-ssr.js
++-- LICENSE
++-- package.json
++-- README.md
++-- yarn.lock
+
+```
+
+Este é um bom momento para tirar um tempo lendo e entendo o código gerado para se familiarizar com o Gatsby. Caso queira iniciar o projeto criado, execute o comando `gatsby develop` na raiz do projeto.
+
+É apenas um projeto simples com imagem e rotas implementado, porém é um grande ponto de partida já que essas funcionalidades são indispensáveis na grande maioria das aplicações web.
+
+###Configurações iniciais
+
+Como iremos aproveitar alguns componentes criados pelo inicializador de projetos do Gatsby faremos algumas configurações iniciais
+
+###Eliminando arquivos desnecessários
+
+A estrutura do projeto gerado pelo `cli` é a seguinte, podendo se diferenciar de acordo com a versão utilizada.
+
+```text
+...
++-- src
+|  +-- components
+|    ...
+|  +-- images
+|    ...
+|  +-- pages
+|    +-- 404.js
+|    +-- index.js
+|    +-- page-2.js
+...
+```
+
+Podemos então eliminar toda a pasta `components` e `images` pois não utilizaremos ela no momento, também podemos deletar os arquivos `404.js` e `page-2.js` que estão dentro da pasta `pages`.

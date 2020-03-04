@@ -21,30 +21,30 @@ h1 {
   color: var(--textTitle);
   font-size: 2.4615em;
   line-height: 1.125em;
-  margin-top: 0em;
-  margin-bottom: 0.5625em;
+  margin-top: 0.5625em;
+  margin-bottom: 0em;
 }
 h2 {
   color: var(--textTitle);
   font-size: 1.5385em;
   font-weight: normal;
   line-height: 1.8em;
-  margin-top: 0em;
-  margin-bottom: 0.9em;
+  margin-top: 0.9em;
+  margin-bottom: 0.5625em;
 }
 h3 {
   color: var(--textTitle);
   font-size: 1.2308em;
   line-height: 1.125em;
-  margin-top: 0em;
-  margin-bottom: 1.125em;
+  margin-top: 1.125em;
+  margin-bottom: 0.5625em;
 }
 h4 {
   color: var(--textTitle);
   font-size: 1.0769em;
   line-height: 1.2857em;
-  margin-top: 0em;
-  margin-bottom: 1.2857em;
+  margin-top: 1.2857em;
+  margin-bottom: 0.5625em;
 }
 h5 {
   color: var(--textTitle);
