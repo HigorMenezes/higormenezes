@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { AvatarContainer } from "./styles";
 
 const Avatar = () => {
-  const data = useStaticQuery(graphql`
+  const { file } = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "myself.png" }) {
         childImageSharp {
@@ -20,9 +20,9 @@ const Avatar = () => {
   return (
     <AvatarContainer>
       <Img
-        fluid={data.file.childImageSharp.fluid}
+        fluid={file.childImageSharp.fluid}
         objectFit="cover"
-        alt=""
+        alt="Higor Menezes"
         style={{ top: "-10px" }}
       />
     </AvatarContainer>
