@@ -5,11 +5,7 @@ import SEO from "../components/SEO";
 
 const IndexPage = () => (
   <MainLayout>
-    <SEO
-      title="Hello, my friends"
-      description="Que tal saber um pouco sobre meu intúito com este blog"
-      lang="pt-BR"
-    />
+    <SEO title="Oi, meu chapa" lang="pt-BR" />
     <article>
       <h1>
         Olá pessoas&nbsp;
