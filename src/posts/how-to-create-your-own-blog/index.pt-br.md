@@ -4,11 +4,11 @@ date: "2020-02-09"
 spoiler: Eai, já pensou em criar seu próprio blog e compartilhar um pouco de seu conhecimento?
 ---
 
-Gatsby é uma framework incrível, e muito simples de utilizar que pode te ajudar muito na criação do seu próprio blog. Uma das vantagem dessa tecnologia é o fato de você poder escrever seus blogs utilizando markdown e utilizando alguns plugs e transformá-los em HTML, e com um bom CSS poder deixar isso incrível.
+Gatsby é uma framework incrível, e muito simples de utilizar que pode te ajudar muito na criação do seu próprio blog. Uma das vantagem dessa tecnologia é o fato de você poder escrever seus blogs utilizando markdown e com apenas alguns plugs transformá-los em HTML, e com um bom CSS poder deixar isso incrível.
 
 ###Tecnologias utilizadas
 
-Para desenvolver o este blog, foi utilizado as seguintes tecnologias e suas versões:
+Para desenvolver o exemplo de blog a seguir, foi utilizado as seguintes tecnologias e suas versões:
 
 - [NodeJS](https://nodejs.org/en/) v12.16.0
 - [npm](https://nodejs.org/en/) v6.13.4
@@ -32,11 +32,11 @@ Após isto podemos então iniciar nosso projeto.
 gatsby new nome-do-seu-projeto
 ```
 
-Esse comando criará um projeto inicial de exemplo, como a nossa ideia é a criação de um blog, grande parte do projeto inicial será descartado.
+Esse comando criará um projeto inicial de exemplo, pode demorar alguns minutos, como a nossa ideia é a criação de um blog, muito será modificado do projeto inicial.
 
 ###Projeto iniciado
 
-A estrutura do projeto gerado pelo é a seguinte, podendo se diferenciar de acordo com a versão utilizada.
+A estrutura do projeto gerado pelo é a seguinte:
 
 ```text
 .
@@ -63,13 +63,11 @@ A estrutura do projeto gerado pelo é a seguinte, podendo se diferenciar de acor
 
 ```
 
-Este é um bom momento para tirar um tempo lendo e entendo o código gerado para se familiarizar com o Gatsby. Caso queira iniciar o projeto criado, execute o comando `gatsby develop` na raiz do projeto.
-
-É apenas um projeto simples com imagem e rotas implementado, porém é um grande ponto de partida já que essas funcionalidades são indispensáveis na grande maioria das aplicações web.
+Este é um bom momento para tirar um tempo lendo e entendo o código gerado para se familiarizar com o Gatsby. Caso queira rodar o projeto criado, execute o comando `gatsby develop` na raiz do projeto. É apenas um projeto simples com imagem e rotas, porém é um grande ponto de partida já que essas funcionalidades são indispensáveis na grande maioria das aplicações web.
 
 ###Configurações iniciais
 
-Como iremos aproveitar alguns componentes criados pelo inicializador de projetos do Gatsby faremos algumas configurações iniciais
+Como iremos aproveitar alguns componentes criados pelo inicializador de projetos do Gatsby, faremos algumas alterações nos arquivos gerados
 
 ###Eliminando arquivos desnecessários
 

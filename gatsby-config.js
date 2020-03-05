@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Higor Menezes`,
-    description: `Just a blog to share my programmer's life`,
-    author: `higormenezes`,
+    description: `Apenas um blog para compartilhar minha vida de programador`,
+    author: `Higor Menezes`,
+    siteUrl: `https://www.higormenezes.com/`,
   },
   pathPrefix: "/",
   plugins: [
