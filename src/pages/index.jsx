@@ -8,9 +8,9 @@ const IndexPage = () => (
     <SEO title="Oi, meu chapa" lang="pt-BR" />
     <article>
       <h1>
-        Olá pessoas&nbsp;
-        <span role="img" aria-label="feliz">
-          😁
+        Oi, meu chapa&nbsp;
+        <span role="img" aria-label="texugo">
+          🦡
         </span>
       </h1>
       <p>
