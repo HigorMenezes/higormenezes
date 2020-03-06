@@ -61,7 +61,7 @@ pre[class*="language-"] ::selection {
   background: var(--bgInlineCode);
   color: var(--inlineCodeText);
   padding: 0.15em 0.2em 0.05em;
-  white-space: normal;
+  white-space: nowrap;
 }
 
 .token.attr-name {
@@ -150,7 +150,7 @@ blockquote {
 }
 
 .gatsby-highlight {
-  margin-bottom: 1.75rem;
+  margin-top: 1.3125rem;
   margin-left: -1.3125rem;
   margin-right: -1.3125rem;
   border-radius: 10px;

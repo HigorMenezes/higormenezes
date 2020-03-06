@@ -64,7 +64,7 @@ export const HeaderNavigation = styled.nav`
   align-items: center;
   justify-content: flex-start;
 
-  padding-left: 1rem;
+  padding-left: 2rem;
 
   ${media.greaterThan("small")`
     padding-left: 5rem;
