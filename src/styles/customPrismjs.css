@@ -61,7 +61,7 @@ pre[class*="language-"] ::selection {
   background: var(--bgInlineCode);
   color: var(--inlineCodeText);
   padding: 0.15em 0.2em 0.05em;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .token.attr-name {
@@ -145,7 +145,7 @@ blockquote {
   margin-right: -1.3125rem;
   margin-left: -1.3125rem;
   padding-right: 1em;
-  padding-left: 1.25em;
+  padding-left: 1em;
   border-left: 0.25em solid var(--textLink);
 }
 
@@ -159,7 +159,12 @@ blockquote {
   overflow: auto;
 }
 
-@media (max-width: 800px) {
+.gatsby-highlight pre[class*="language-"] {
+  float: left;
+  min-width: 100%;
+}
+
+@media (max-width: 840px) {
   .gatsby-highlight {
     border-radius: 0;
   }

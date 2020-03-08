@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import { RightArrowAlt } from "styled-icons/boxicons-regular/RightArrowAlt";
+import { RightArrowAlt } from "styled-icons/boxicons-regular";
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -29,7 +29,7 @@ export const HeaderContainer = styled.header`
 export const HeaderContent = styled.div`
   width: 100%;
   height: 100%;
-  max-width: 50rem;
+  max-width: 980px;
   padding: 0rem 1rem;
 
   display: flex;

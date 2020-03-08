@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Lightbulb } from "styled-icons/fa-regular/Lightbulb";
+import { Lightbulb } from "styled-icons/fa-regular";
 
 export const Button = styled.button`
   position: relative;

@@ -61,6 +61,7 @@ export const getAllPosts = graphql`
     }
   }
 `;
+
 PostList.defaultProps = {
   pageContext: {
     langKey: "pt-br",

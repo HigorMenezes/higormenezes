@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
-import { Linkedin } from "styled-icons/fa-brands/Linkedin";
-import { Github } from "styled-icons/fa-brands/Github";
+import { Linkedin, Github } from "styled-icons/fa-brands";
 
 export const FooterContainer = styled.footer`
   width: 100%;

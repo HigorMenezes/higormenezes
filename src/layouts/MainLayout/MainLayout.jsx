@@ -15,7 +15,7 @@ import "../../styles/remarkAutolink.css";
 import { Container } from "./styles";
 
 const MainLayout = ({ children }) => {
-  const data = useStaticQuery(graphql`
+  const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -27,7 +27,7 @@ const MainLayout = ({ children }) => {
 
   return (
     <Container>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={site.siteMetadata.title} />
       <Main>{children}</Main>
       <Footer />
     </Container>

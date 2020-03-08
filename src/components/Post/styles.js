@@ -30,7 +30,7 @@ export const Header = styled.header`
 
 export const Title = styled.h1`
   width: 100%;
-  font-size: 1.7rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
   color: var(--textTitle);
 `;
