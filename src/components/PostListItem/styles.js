@@ -6,6 +6,7 @@ export const PostListItemContainer = styled(Link)`
   padding: 1rem;
   border: 0.05rem solid var(--hr);
   border-radius: 0.3rem;
+  text-decoration: none;
 
   transition: border 0.3s, box-shadow 0.3s;
 

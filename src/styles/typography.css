@@ -107,14 +107,12 @@ dt {
 a:link,
 a:visited {
   color: var(--textLink);
-  text-decoration: none;
 }
 
 a:hover,
 a:focus,
 a:active {
   color: var(--textLinkHover);
-  text-decoration: none;
 }
 
 hr {

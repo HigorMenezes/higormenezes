@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 export const LinkContainer = styled(Link)`
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 
   &:hover,
   &:focus,

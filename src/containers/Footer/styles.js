@@ -23,6 +23,7 @@ export const Link = styled.a.attrs({
   rel: "noopener noreferrer",
 })`
   padding: 0.2rem 0.5rem;
+  text-decoration: none;
 
   display: flex;
   align-items: center;

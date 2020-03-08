@@ -16,7 +16,7 @@ Para desenvolver o exemplo de blog a seguir, foi utilizado as seguintes tecnolog
 - [GatsbyJS](https://www.gatsbyjs.org/docs/quick-start/) v2.19.16
 - [Gatsby CLI](https://www.gatsbyjs.org/docs/quick-start/) v2.8.29
 
-Vale ressaltar que caso esteja utilizando versões diferentes das tecnologias pode ser que alguns passos para a criação do blog seja diferente, mas nada que uma boa pesquise não resolva seu problema, portanto, utilize a versão que te deixe mais confortável.
+Vale ressaltar que caso esteja utilizando versões diferentes das tecnologias pode ser que alguns passos para a criação do blog seja diferente, mas nada que uma boa pesquisa não resolva seu problema, portanto, utilize a versão que te deixe mais confortável.
 
 ## Iniciando o projeto
 
@@ -97,13 +97,13 @@ module.exports = {
 };
 ```
 
-No caso deixamos apenas deixamos apenas o plugin `gatsby-plugin-react-helmet` pois reutilizaremos o componente `seo.js` que nos auxilia com os motores de busca.
+No caso deixamos apenas o plugin `gatsby-plugin-react-helmet` pois reutilizaremos o componente `src/components/seo.js` que nos auxilia com os motores de busca.
 
 ## Eliminando arquivos desnecessários
 
 Bom, se você tentar rodar o projeto agora, alguns erros ocorrerão, isso por quê foram removidos alguns plugins que era utilizado pelo código, então agora vamos deletar arquivos desnecessários e editar outros para que nosso projeto volte a funcionar.
 
-Vamos começar deletando a pasta `images` dentro da pasta `src`; também deletaremos os arquivos `404.js` e `page-2.js` que se encontra na pasta `src/pages`; dentro da pasta `src/components` vamos apenas deixar o arquivo `seo.js`. Nossa estrutura de pasta passa a ser a seguinte:
+Vamos começar deletando a pasta `src/images` dentro da pasta `src`; também deletaremos os arquivos `404.js` e `page-2.js` que se encontra na pasta `src/pages`; dentro da pasta `src/components` vamos apenas deixar o arquivo `seo.js`. Nossa estrutura de pasta passa a ser a seguinte:
 
 ```text
 .
@@ -143,13 +143,13 @@ const IndexPage = () => (
 export default IndexPage;
 ```
 
-Agora sim no temos nosso incrível blog funcionando, bom, talvez não tão incrível ainda.
+Agora sim nós temos nosso incrível blog funcionando, bom, talvez não tão incrível ainda.
 
 ## Criando o layout do blog
 
 O layout do nosso blog será um arquivo simples, que conterá um header e o conteúdo principal. Esse arquivo também terá a funcionalidade de carregar alguns arquivos `css` e também de realizar uma query `GraphQL` para recuperar os meta-dados que preenchemos no arquivo `gatsby-config.js`, nosso arquivo `src/components/layout.js` ficará assim:
 
-```jsx
+```jsx{3}
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import "./style.css";
@@ -179,6 +179,8 @@ const Layout = ({ children }) => {
 
 export default Layout;
 ```
+
+O arquivo `style.css` **não** será explicado no decorrer do artigo, porém você pode acessá-lo clicando [aqui](./style.css)
 
 Após isso, podemos então atualizar nosso arquivo `src/pages/index.js` para utilizar esse layout.
 
@@ -237,9 +239,9 @@ Accumsan sit amet nulla facilisi morbi. Mauris sit amet massa vitae tortor condi
 quis vel.
 ```
 
-Os dados que estão entre o símbolos `---` são de grande importância, já que será os dados que serão recuperados pela página via `graphQL`, você pode dar qualquer nome as variáveis e declarar quantas quiser, no caso, foi declarada `title`, `date` e `spoiler`, pois é as que serão importantes para nosso blog. Fique a vontade para escrever o outro artigo, é interessantes escrevermos pelo menos 2 para que possamos representar melhor um blog.
+Os dados que estão entre o símbolos `---` são de grande importância, já que será os dados que serão recuperados pela página via `graphQL`, você pode dar qualquer nome as variáveis e declarar quantas quiser, no caso, foi declarada `title`, `date` e `spoiler`, pois é as que serão importantes para nosso blog. Fique à vontade para escrever o outro artigo, é interessante escrevermos pelo menos 2 para que possamos representar melhor um blog.
 
-## Criando a pagina de lista de artigos
+## Criando a página de lista de artigos
 
 Para criar a página que listará todos os artigos escritos utilizaremos uma abordagem um pouco diferente do que só criar um arquivo na pasta `src/pages`, utilizaremos o arquivo `gatsby-node.js` para criá-la através de uma template. Vamos começar então criando um template genérico para listar os artigos. Criaremos então o arquivo `src/templates/PostList.js`.
 
@@ -258,7 +260,7 @@ const PostList = () => (
 export default PostList;
 ```
 
-Após isso, vamos ao arquivo `gatsby-node.js` para utilizar a API createPages disponibilizada para criarmos nossa página de artigos. Caso queira ler um pouco mais sobre o arquivo `gatsby-node.js` e suas APIs [clique aqui](https://www.gatsbyjs.org/docs/node-apis/).
+Após isso, vamos ao arquivo `gatsby-node.js` e utilizaremos a API `createPages` disponibilizada por ele, para criarmos nossa página que listará os artigos. Caso queira ler um pouco mais sobre o arquivo `gatsby-node.js` e suas APIs [clique aqui](https://www.gatsbyjs.org/docs/node-apis/).
 
 ```js
 const path = require("path");
@@ -313,7 +315,15 @@ export default IndexPage;
 
 Também aproveitei para adicionar mais algumas coisinhas na página pois estava muito vazia.
 
-Agora nós precisamos recuperar todos os artigos que estão disponíveis na pasta `src/posts`, e para isso utilizaremos dois plugin para que os arquivos fiquem disponível via query `graphQL`. O primeiro é `gatsby-source-filesystem` que permitirá que os arquivos de uma determinada pasta fique acessível via query e o `gatsby-transformer-remark` que transforma os arquivos `markdown` em `MarkdownRemark` podendo assim ser convertido para `HTML`, Portanto devemos adicionar esses dois plugins no nosso arquivo `gatsby-config.js`.
+Agora nós precisamos recuperar todos os artigos que estão disponíveis na pasta `src/posts`, e para isso utilizaremos dois plugins para que os arquivos fiquem disponível via query `graphQL`. O primeiro é `gatsby-source-filesystem` que permitirá que os arquivos de uma determinada pasta fique acessível via query e o `gatsby-transformer-remark` que transforma os arquivos `markdown` em `MarkdownRemark` podendo assim ser convertido para `HTML`.
+
+Primeiramente precisamos instalar os dois plugins em questão, para isso, utilize um gerenciador de pacote `node` de sua preferência, no meu caso utilizarei `yarn`, segue o comando:
+
+```bash
+yarn add gatsby-source-filesystem gatsby-transformer-remark
+```
+
+Após instalar os plugins podemos então adicioná-los no nosso arquivo `gatsby-config.js`.
 
 ```js{9-16}
 module.exports = {
@@ -390,7 +400,7 @@ export const getAllPosts = graphql`
 export default PostList;
 ```
 
-Porém ainda está faltando algo, foi dito que iriamos utilizar o nome da pasta de onde se encontra o arquivo `markdown` para criar a URL para o artigo, e nesse momento estamos precisando do nome da pasta para podermos clicar em um artigo e ser direcionado ao conteúdo dele. Por isso, iremos voltar ao arquivo `gatasby-node.js` para utilizarmos uma outra API, `onCreateNode`, para podermos adicionar campos personalizados nos `onde` que são retornados da consulta `graphQL`.
+Porém ainda está faltando algo, foi dito que iríamos utilizar o nome da pasta de onde se encontra o arquivo `markdown` para criar a URL para o artigo, e nesse momento estamos precisando do nome da pasta para podermos clicar em um artigo e ser direcionado ao conteúdo dele. Por isso, iremos voltar ao arquivo `gatasby-node.js` para utilizarmos uma outra API, `onCreateNode`, para podermos adicionar campos personalizados nos `node` que são retornados da consulta `graphQL`.
 
 ```js
 ...
@@ -410,7 +420,7 @@ exports.onCreateNode = ({ node, actions }) => {
 }
 ```
 
-Agora podemos, no arquivo `src/templates/PostList.js` alterar a query `graphQL` para buscar pelo campo `path`e adicioná-lo no componente `Link` para redirecionar para a página do artigo, que ainda não foi criada mas será em breve.
+Agora podemos, no arquivo `src/templates/PostList.js`, alterar a query `graphQL` para buscar pelo campo `path` e adicioná-lo no componente `Link` para redirecionar para a página do artigo, que ainda não foi criada, mas será em breve.
 
 ```jsx{5,8,21-23}
 ...
@@ -467,9 +477,20 @@ export default Post;
 
 Agora vamos até o arquivo `gatsby-node.js` para criarmos as páginas que usarão esse template.
 
-```js
+```js{3,7}
+const path = require("path")
+
 exports.createPages = ({ graphql, actions }) => {
-  ...
+  const { createPage } = actions
+
+  const PostList = path.resolve("./src/templates/PostList.js")
+  const Post = path.resolve("./src/templates/Post.js")
+
+  createPage({
+    path: "/posts/",
+    component: PostList,
+  })
+
   return graphql(
     `
       {
@@ -504,7 +525,7 @@ exports.createPages = ({ graphql, actions }) => {
 ...
 ```
 
-Com isso, nossa as páginas para cada artigo foi criada, e precisamos agora realizar uma query `graphQL` no template de artigo, `src/templates/Post.js`, para que possamos recuperar o conteúdo do `markdown` em formato `HTML` e exibir na página.
+Com isso, as páginas para cada artigo foi criada, e precisamos agora realizar uma query `graphQL` no template de artigo, `src/templates/Post.js`, para que possamos recuperar o conteúdo do `markdown` em formato `HTML` e exibir na página.
 
 ```jsx{2,6-8,13-21, 27-35}
 import React from "react";
@@ -547,8 +568,8 @@ export const getPostByPath = graphql`
 export default Post;
 ```
 
-E pronto, agora basta popular a sua pasta `src/posts` com todos seus artigos escritos em `markdown` que ao subir o projeto todos eles se tornaram uma página `HTML` respeitando os templates feito.
+E pronto, agora basta popular a sua pasta `src/posts` com todos seus artigos escritos em `markdown` que ao subir o projeto todos eles se tornarão uma página `HTML` respeitando os templates feitos.
 
-## Informações adicionáis
+## Informações adicionais
 
-O `gatsby` disponibiliza uma série de plugins para que possa customizar ainda mais as páginas e o `HTML` gerado através do arquivo `markdown`, porém esse artigo já esta muito extenso para abordarmos isso por agora e acredito ser melhor abordar esse conteúdo em um outro artigo.
+O `gatsby` disponibiliza uma série de plugins para que possa customizar ainda mais as páginas e o `HTML` gerado através do arquivo `markdown`, porém esse artigo já está muito extenso para abordarmos isso por agora e acredito ser melhor abordar esse conteúdo em um outro artigo.
