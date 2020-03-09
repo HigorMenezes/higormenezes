@@ -8,7 +8,7 @@ export const Small = styled.small`
   display: flex;
   color: var(--textNormal);
 
-  & :not(:last-child)::after {
+  & > :not(:last-child)::after {
     content: "•";
     padding: 0rem 0.3rem;
   }

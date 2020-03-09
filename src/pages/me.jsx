@@ -5,15 +5,15 @@ import SEO from "../components/SEO";
 const MePage = () => (
   <MainLayout>
     <SEO
-      title="It's me, Higor"
+      title="It's-a me, Higor!"
       description="Que tal me conhecer um pouco melhor"
       lang="pt-BR"
     />
     <article>
       <h1>
-        It&rsquo;s me, myself and I&nbsp;
-        <span role="img" aria-label="musica">
-          🎶
+        It&rsquo;s-a me, Higor!&nbsp;
+        <span role="img" aria-label="chave de boca">
+          🔧
         </span>
       </h1>
       <p>

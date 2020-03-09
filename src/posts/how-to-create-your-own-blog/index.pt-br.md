@@ -180,7 +180,7 @@ const Layout = ({ children }) => {
 export default Layout;
 ```
 
-O arquivo `style.css` **não** será explicado no decorrer do artigo, porém você pode acessá-lo clicando [aqui](./style.css)
+O arquivo `style.css` **não** será explicado no decorrer do artigo, porém você deixarei seu código disponível: [style.css](./style.css).
 
 Após isso, podemos então atualizar nosso arquivo `src/pages/index.js` para utilizar esse layout.
 
@@ -260,7 +260,7 @@ const PostList = () => (
 export default PostList;
 ```
 
-Após isso, vamos ao arquivo `gatsby-node.js` e utilizaremos a API `createPages` disponibilizada por ele, para criarmos nossa página que listará os artigos. Caso queira ler um pouco mais sobre o arquivo `gatsby-node.js` e suas APIs [clique aqui](https://www.gatsbyjs.org/docs/node-apis/).
+Após isso, vamos ao arquivo `gatsby-node.js` e utilizaremos a API `createPages` disponibilizada por ele, para criarmos nossa página que listará os artigos. Caso queira ler um pouco mais sobre o arquivo `gatsby-node.js` e suas APIs, indico a leitura da própria [documentação](https://www.gatsbyjs.org/docs/node-apis/) do gatsby.
 
 ```js
 const path = require("path");

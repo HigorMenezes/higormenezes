@@ -25,7 +25,7 @@ export const Small = styled.small`
   color: var(--textNormal);
   align-self: flex-end;
 
-  & :not(:last-child)::after {
+  & > :not(:last-child)::after {
     content: "•";
     padding: 0rem 0.3rem;
   }

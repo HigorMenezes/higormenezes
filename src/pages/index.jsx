@@ -56,8 +56,8 @@ const IndexPage = () => (
       </p>
       <p>
         Caso discorde de qualquer conteúdo presente nesse site, estou
-        completamente disposto para termos uma conversa amigável discutindo esse
-        tópico, compartilhar conhecimento nunca é demais.
+        completamente a disposição para termos uma conversa amigável discutindo
+        esse tópico, conversas saudáveis só tem a colaborar.
       </p>
       <p>
         Para entrar em contato comigo, minhas redes sociais estão no rodapé,
@@ -65,7 +65,7 @@ const IndexPage = () => (
         <span role="img" aria-label="seta para baixo">
           ⬇
         </span>
-        .
+        , não vejo nenhum problema em batermos um papo.
       </p>
     </article>
   </MainLayout>
