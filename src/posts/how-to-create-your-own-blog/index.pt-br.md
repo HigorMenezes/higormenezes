@@ -1,7 +1,7 @@
 ---
 title: Como criar seu próprio blog
 date: "2020-02-09"
-spoiler: Eai, já pensou em criar seu próprio blog e compartilhar um pouco de seu conhecimento?
+spoiler: E aí, já pensou em criar seu próprio blog e compartilhar um pouco de seu conhecimento?
 ---
 
 Gatsby é uma framework incrível e muito simples de utilizar que pode te ajudar muito na criação de sites. Uma das vantagem dessa tecnologia é o fato de você poder escrever artigos utilizando `markdown` e com apenas alguns plugins transformá-los em HTML, e com um bom CSS poder deixar isso incrível.

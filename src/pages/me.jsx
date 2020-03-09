@@ -17,7 +17,7 @@ const MePage = () => (
         </span>
       </h1>
       <p>
-        Eai galera, me chamo Higor Aparecido Menezes tenho 23 anos de idade, e
+        E aí galera, me chamo Higor Aparecido Menezes tenho 23 anos de idade, e
         sou apaixonado pela linguagem Javascript. Atualmente estou morando em
         Florianópolis-SC e trabalho na empresa Softplan Planejamento e Sistemas.
       </p>
@@ -31,8 +31,8 @@ const MePage = () => (
       </p>
       <p>
         Acredito que eu seja uma pessoa meio metódica, gosto muito de entender o
-        por que das coisas, e as vezes até recriálas do zero para tentar sentir
-        toda a dificuldade. Em minha opnião, reenventar a roda é uma forma
+        por que das coisas, e as vezes até recriá-las do zero para tentar sentir
+        toda a dificuldade. Em minha opnião, reinventar a roda é uma forma
         fantástica de aprender.
       </p>
       <p>
