@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Avatar from "../../components/Avatar";
 import DarkLightToggle from "../../components/DarkLightToggle";
@@ -24,7 +23,7 @@ const Header = ({ siteTitle }) => {
     <HeaderContainer className={hide ? "hide" : "show"}>
       <HeaderContent>
         <HeaderTitle>
-          <HeaderLink to="/">
+          <HeaderLink to="/" aria-label={siteTitle}>
             <Avatar />
             <Title>{siteTitle}</Title>
           </HeaderLink>

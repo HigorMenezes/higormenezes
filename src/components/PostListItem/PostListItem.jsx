@@ -19,7 +19,7 @@ const PostListItem = ({
   date,
   timeToRead,
 }) => (
-  <PostListItemContainer to={slug}>
+  <PostListItemContainer to={slug} aria-label={title}>
     <Article>
       <Header>
         <Title>{title}</Title>

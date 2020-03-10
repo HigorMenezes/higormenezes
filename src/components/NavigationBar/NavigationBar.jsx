@@ -7,7 +7,9 @@ const NavigationBar = () => (
   <NavigationList>
     {routes.map(({ to, name }) => (
       <NavigationItem key={to}>
-        <NavigationLink to={to}>{name}</NavigationLink>
+        <NavigationLink aria-label={name} to={to}>
+          {name}
+        </NavigationLink>
       </NavigationItem>
     ))}
   </NavigationList>
