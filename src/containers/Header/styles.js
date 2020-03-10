@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import media from "styled-media-query";
 import { RightArrowAlt } from "styled-icons/boxicons-regular";
+import { Link } from "gatsby";
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -74,4 +75,10 @@ export const HeaderNavigation = styled.nav`
 export const RightArrow = styled(RightArrowAlt)`
   width: 1.5rem;
   color: var(--textLink);
+`;
+
+export const HeaderLink = styled(Link)`
+  display: flex;
+  max-width: calc(100% - 40px);
+  text-decoration: none;
 `;

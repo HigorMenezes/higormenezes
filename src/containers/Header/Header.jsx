@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Avatar from "../../components/Avatar";
 import DarkLightToggle from "../../components/DarkLightToggle";
@@ -8,6 +9,7 @@ import {
   HeaderContainer,
   HeaderContent,
   HeaderTitle,
+  HeaderLink,
   HeaderNavigation,
   Title,
   RightArrow,
@@ -22,8 +24,10 @@ const Header = ({ siteTitle }) => {
     <HeaderContainer className={hide ? "hide" : "show"}>
       <HeaderContent>
         <HeaderTitle>
-          <Avatar />
-          <Title>{siteTitle}</Title>
+          <HeaderLink to="/">
+            <Avatar />
+            <Title>{siteTitle}</Title>
+          </HeaderLink>
           <DarkLightToggle />
         </HeaderTitle>
         <HeaderNavigation>
